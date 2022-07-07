@@ -12,3 +12,8 @@
   
   kill -9 Pid
   ```
+
+## H2 DB 관련
+- **Connection is broken: "java.net.ConnectException"**
+  - Host이름 및  port 번호가 제대로 설정 되어 있는지 확인
+  - H2 DB가 정상 구동중인지 확인한다. 
