@@ -24,5 +24,5 @@
   ```html
   <%@ page contentType = "text/html; charset=utf-8" %> <!-- 기존의 초기 설정 -->
   <%@ page isELIgnored="false" contentType = "text/html; charset=utf-8" %>
-  isELIgnored="false" <!-- 이거를 추가해주어야 EL태그가 정상적으로 출력된다.--!>
+  isELIgnored="false" <!-- 이거를 추가해주어야 EL태그가 정상적으로 출력된다.-->
   ```
