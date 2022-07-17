@@ -17,3 +17,12 @@
 - **Connection is broken: "java.net.ConnectException"**
   - Host이름 및  port 번호가 제대로 설정 되어 있는지 확인
   - H2 DB가 정상 구동중인지 확인한다. 
+
+## JSP 관련
+- **Intellij에서 EL태그가 정상적으로 출력되지 않는 경우가 있다.**
+  -
+  ```html
+  <%@ page contentType = "text/html; charset=utf-8" %> <!-- 기존의 초기 설정 -->
+  <%@ page isELIgnored="false" contentType = "text/html; charset=utf-8" %>
+  isELIgnored="false" <!-- 이거를 추가해주어야 EL태그가 정상적으로 출력된다.--!>
+  ```
