@@ -26,3 +26,24 @@
   <%@ page isELIgnored="false" contentType = "text/html; charset=utf-8" %>
   isELIgnored="false" <!-- 이거를 추가해주어야 EL태그가 정상적으로 출력된다.-->
   ```
+
+---
+# Tip
+
+## DataSource를 이용한 jdbc 불러오기 초기세팅
+```java
+    private Connection conn;
+    private PreparedStatement pstmt;
+    private ResultSet rs;
+    
+    static DataSource ds;
+    
+    static {
+        try {
+            Context init = new InitialContext();
+            ds = (DataSource)init.lookup("java:/comp/env/jdbc/oracle"); //lookup 안에는 Context.xml 에서 지정한 이름이다.
+        }catch(NamingException e){
+            e.printStackTrace();
+        }
+    }
+ ```
